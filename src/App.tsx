@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import {
   Code2,
   User,
@@ -17,7 +17,6 @@ import {
 } from "lucide-react";
 
 function App() {
-  const [activeSection, setActiveSection] = useState("hero");
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
