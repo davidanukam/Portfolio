@@ -103,18 +103,14 @@ function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white overflow-x-hidden">
-      {/* Navigation */}
+    <div className="min-h-screen bg-[#030303] text-white overflow-x-hidden">
+      {/* Navigation 030303 */}
       <nav
-        className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-          isScrolled
-            ? "bg-gray-900/80 backdrop-blur-md border-b border-white/10"
-            : "bg-transparent"
-        }`}
+        className="fixed top-0 w-full z-50 backdrop-blur-md shadow-nav"
       >
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <div className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+            <div className="text-2xl font-bold text-white bg-clip-text text-transparent">
               David Anukam
             </div>
             <div className="hidden md:flex space-x-8">
@@ -125,7 +121,7 @@ function App() {
                   className="text-gray-300 hover:text-white transition-colors duration-200 relative group"
                 >
                   {item}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 group-hover:w-full transition-all duration-300"></span>
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span>
                 </button>
               ))}
             </div>
@@ -139,40 +135,43 @@ function App() {
         className="min-h-screen flex items-center justify-center relative overflow-hidden"
       >
         {/* Animated Background */}
-        <div className="absolute inset-0 opacity-30">
+        {/* <div className="absolute inset-0 opacity-30">
           <div className="absolute top-20 left-20 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
           <div className="absolute top-40 right-20 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-1000"></div>
           <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-2000"></div>
-        </div>
+        </div> */}
 
+        {/* 333232 */}
         <div className="container mx-auto px-6 text-center relative z-10">
-          <div className="glassmorphism p-12 rounded-3xl border border-white/10">
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 animate-fade-in">
-              <span className="bg-gradient-to-r from-purple-400 via-blue-400 to-green-400 bg-clip-text text-transparent">
-                David Anukam
-              </span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 animate-fade-in delay-300">
-              Computer Science Student & Aspiring ML Engineer
-            </p>
-            <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto animate-fade-in delay-500">
-              Building the future with code, one project at a time. Passionate
-              about solving real-world problems and creating cost-effective
-              solutions that make our world smarter and more interconnected.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in delay-700">
-              <button
-                onClick={() => scrollToSection("projects")}
-                className="glow-button bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-              >
-                View My Work
-              </button>
-              <button
-                onClick={() => scrollToSection("contact")}
-                className="glass-button px-8 py-4 rounded-xl font-semibold border border-white/20 hover:border-white/40 backdrop-blur-md transition-all duration-300 transform hover:scale-105"
-              >
-                Get In Touch
-              </button>
+          <div className="bg-[#161616] p-12 rounded-3xl shadow-nm">
+            <div className="bg-[#2f2f2f] p-8 rounded-2xl shadow-ns">
+              <h1 className="text-6xl md:text-8xl font-bold mb-6 animate-fade-in">
+                <span className="text-white bg-clip-text text-transparent">
+                  David Anukam
+                </span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 animate-fade-in delay-300">
+                Computer Science Student & Aspiring ML Engineer
+              </p>
+              <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto animate-fade-in delay-500">
+                Building the future with code, one project at a time. Passionate
+                about solving real-world problems and creating cost-effective
+                solutions that make our world smarter and more interconnected.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in delay-700">
+                <button
+                  onClick={() => scrollToSection("projects")}
+                  className="glow-button bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+                >
+                  View My Work
+                </button>
+                <button
+                  onClick={() => scrollToSection("contact")}
+                  className="glass-button px-8 py-4 rounded-xl font-semibold border border-white/20 hover:border-white/40 backdrop-blur-md transition-all duration-300 transform hover:scale-105"
+                >
+                  Get In Touch
+                </button>
+              </div>
             </div>
           </div>
 
@@ -211,15 +210,16 @@ function App() {
                 continuous learning and sharing knowledge through my YouTube
                 channel{" "}
                 <u>
-                <span className="text-red-400">
-                  <a
-                    href="https://www.youtube.com/@Duzzenn"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Duzzenn
-                  </a>
-                </span></u>
+                  <span className="text-red-400">
+                    <a
+                      href="https://www.youtube.com/@Duzzenn"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Duzzenn
+                    </a>
+                  </span>
+                </u>
                 .
               </p>
             </div>
