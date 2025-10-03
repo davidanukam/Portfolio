@@ -8,7 +8,6 @@ import {
   Instagram,
   Youtube,
   ExternalLink,
-  ChevronDown,
   Sparkles,
   Brain,
   Database,
@@ -16,7 +15,6 @@ import {
 } from "lucide-react";
 
 function App() {
-
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -94,13 +92,11 @@ function App() {
   return (
     <div className="min-h-screen bg-[#030303] text-white overflow-x-hidden">
       {/* Navigation 030303 */}
-      <nav
-        className="fixed top-0 w-full z-50 backdrop-blur-md shadow-nav"
-      >
+      <nav className="fixed top-0 w-full z-50 backdrop-blur-md shadow-nav">
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <div className="text-2xl font-bold text-white bg-clip-text text-transparent">
-              David Anukam
+              My Portfolio
             </div>
             <div className="hidden md:flex space-x-8">
               {["About", "Skills", "Projects", "Contact"].map((item) => (
@@ -132,40 +128,43 @@ function App() {
 
         {/* 333232 */}
         <div className="container mx-auto px-6 text-center relative z-10">
-          <div className="bg-[#161616] p-12 rounded-3xl shadow-nm">
-            <div className="bg-[#2f2f2f] p-8 rounded-2xl shadow-ns">
-              <h1 className="text-6xl md:text-8xl font-bold mb-6 animate-fade-in">
-                <span className="text-white bg-clip-text text-transparent">
-                  David Anukam
-                </span>
+          <div className="bg-[#101010] p-8 rounded-3xl shadow-nm">
+            <div className="bg-[#161616] p-8 rounded-2xl shadow-ns">
+              <h1 className="font-[Inter] text-6xl md:text-8xl text-shadow-lg text-shadow-black font-extrabold uppercase mb-2 animate-fade-in">
+                <span className="text-white">David Anukam</span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 animate-fade-in delay-300">
-                Computer Science Student & Aspiring ML Engineer
+              <p className="text-xl md:text-1xl font-black text-gray-300 mb-8 animate-fade-in delay-300">
+                <div className="w-4/5 h-1 bg-white mx-auto rounded-full mb-4"></div>
+                — Computer Science Student & Aspiring ML Engineer —
               </p>
-              <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto animate-fade-in delay-500">
-                Building the future with code, one project at a time. Passionate
-                about solving real-world problems and creating cost-effective
-                solutions that make our world smarter and more interconnected.
+              <p className="text-lg bg-[#2f2f2f] text-white mb-12 max-w-4xl mx-auto animate-fade-in delay-500 shadow-nm rounded-2xl p-6">
+                "Building the future with code,{" "}
+                <u>
+                  <a
+                    href="https://github.com/davidanukam"
+                    target="_blank"
+                    className="text-blue-500 text-shadow-lg hover:text-red-500 cursor-pointer"
+                  >
+                    one project
+                  </a>
+                </u>{" "}
+                at a time."
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in delay-700">
                 <button
                   onClick={() => scrollToSection("projects")}
-                  className="glow-button bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+                  className="glow-button bg-black px-6 py-4 rounded-xl font-semibold shadow-ns transition-all duration-300 transform hover:scale-105 hover:shadow-nm"
                 >
                   View My Work
                 </button>
                 <button
                   onClick={() => scrollToSection("contact")}
-                  className="glass-button px-8 py-4 rounded-xl font-semibold border border-white/20 hover:border-white/40 backdrop-blur-md transition-all duration-300 transform hover:scale-105"
+                  className="glass-button px-8 py-4 rounded-xl font-semibold shadow-ns hover:shadow-nm backdrop-blur-md transition-all duration-300 transform hover:scale-105"
                 >
                   Get In Touch
                 </button>
               </div>
             </div>
-          </div>
-
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <ChevronDown className="w-8 h-8 text-gray-400" />
           </div>
         </div>
       </section>
@@ -174,14 +173,14 @@ function App() {
       <section id="about" className="py-20 relative">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white bg-clip-text text-transparent">
               About Me
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-blue-400 mx-auto rounded-full"></div>
+            <div className="w-24 h-1 bg-white mx-auto rounded-full"></div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="glassmorphism p-8 rounded-2xl border border-white/10 hover:border-white/20 transition-all duration-300">
+            <div className="glassmorphism p-8 rounded-2xl border shadow-nm hover:border-purple-400/30 transition-all duration-300">
               <div className="flex items-center mb-6">
                 <User className="w-8 h-8 text-purple-400 mr-3" />
                 <h3 className="text-2xl font-bold">My Journey</h3>
@@ -214,7 +213,7 @@ function App() {
             </div>
 
             <div className="space-y-6">
-              <div className="glassmorphism p-6 rounded-xl border border-white/10 hover:border-green-400/30 transition-all duration-300 group">
+              <div className="glassmorphism p-6 rounded-xl border shadow-nm hover:border-green-400/30 transition-all duration-300 group">
                 <h4 className="text-xl font-semibold mb-3 text-green-400">
                   What I Love ❤️
                 </h4>
@@ -234,7 +233,7 @@ function App() {
                 </ul>
               </div>
 
-              <div className="glassmorphism p-6 rounded-xl border border-white/10 hover:border-orange-400/30 transition-all duration-300 group">
+              <div className="glassmorphism p-6 rounded-xl border shadow-nm hover:border-orange-400/30 transition-all duration-300 group">
                 <h4 className="text-xl font-semibold mb-3 text-orange-400">
                   Currently Learning 🔥
                 </h4>
@@ -259,10 +258,10 @@ function App() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20 bg-gray-800/50">
+      <section id="skills" className="py-20 bg-[#101010]">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
               Skills & Technologies
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-green-400 to-blue-400 mx-auto rounded-full"></div>
@@ -327,7 +326,7 @@ function App() {
       <section id="projects" className="py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-green-400 bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
               Featured Projects
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-green-400 mx-auto rounded-full"></div>
